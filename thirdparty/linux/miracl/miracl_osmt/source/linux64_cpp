@@ -1,0 +1,69 @@
+rm -f *.exe
+rm -f libmiracl.a
+cp mirdef.hpp mirdef.h
+g++ -c -m64 -O2 -fPIE mrcore.c
+g++ -c -m64 -O2 -fPIE mrarth0.c
+g++ -c -m64 -O2 -fPIE mrarth1.c
+g++ -c -m64 -O2 -fPIE mrarth2.c
+g++ -c -m64 -O2 -fPIE mralloc.c
+g++ -c -m64 -O2 -fPIE mrsmall.c
+g++ -c -m64 -O2 -fPIE mrio1.c
+g++ -c -m64 -O2 -fPIE mrio2.c
+g++ -c -m64 -O2 -fPIE mrgcd.c
+g++ -c -m64 -O2 -fPIE mrjack.c
+g++ -c -m64 -O2 -fPIE mrxgcd.c
+g++ -c -m64 -O2 -fPIE mrarth3.c
+g++ -c -m64 -O2 -fPIE mrbits.c
+g++ -c -m64 -O2 -fPIE mrrand.c
+g++ -c -m64 -O2 -fPIE mrprime.c
+g++ -c -m64 -O2 -fPIE mrcrt.c
+g++ -c -m64 -O2 -fPIE mrscrt.c
+g++ -c -m64 -O2 -fPIE mrmonty.c
+g++ -c -m64 -O2 -fPIE mrpower.c
+g++ -c -m64 -O2 -fPIE mrsroot.c
+g++ -c -m64 -O2 -fPIE mrcurve.c
+g++ -c -m64 -O2 -fPIE mrfast.c
+g++ -c -m64 -O2 -fPIE mrshs.c
+g++ -c -m64 -O2 -fPIE mrshs256.c
+g++ -c -m64 -O2 -fPIE mrshs512.c
+g++ -c -m64 -O2 -fPIE mrsha3.c
+g++ -c -m64 -O2 -fPIE mrfpe.c
+g++ -c -m64 -O2 -fPIE mraes.c
+g++ -c -m64 -O2 -fPIE mrgcm.c
+g++ -c -m64 -O2 -fPIE mrlucas.c
+g++ -c -m64 -O2 -fPIE mrzzn2.c
+g++ -c -m64 -O2 -fPIE mrzzn2b.c
+g++ -c -m64 -O2 -fPIE mrzzn3.c
+g++ -c -m64 -O2 -fPIE mrecn2.c
+g++ -c -m64 -O2 -fPIE mrstrong.c
+g++ -c -m64 -O2 -fPIE mrbrick.c
+g++ -c -m64 -O2 -fPIE mrebrick.c
+g++ -c -m64 -O2 -fPIE mrec2m.c
+g++ -c -m64 -O2 -fPIE mrgf2m.c
+g++ -c -m64 -O2 -fPIE mrflash.c
+g++ -c -m64 -O2 -fPIE mrfrnd.c
+g++ -c -m64 -O2 -fPIE mrdouble.c
+g++ -c -m64 -O2 -fPIE mrround.c
+g++ -c -m64 -O2 -fPIE mrbuild.c
+g++ -c -m64 -O2 -fPIE mrflsh1.c
+g++ -c -m64 -O2 -fPIE mrpi.c
+g++ -c -m64 -O2 -fPIE mrflsh2.c
+g++ -c -m64 -O2 -fPIE mrflsh3.c
+g++ -c -m64 -O2 -fPIE mrflsh4.c
+cp mrmuldv.g64 mrmuldv.c
+g++ -c -m64 -O2 -fPIE mrmuldv.c
+g++ -c -m64 -O2 -fPIE big.cpp
+g++ -c -m64 -O2 -fPIE zzn.cpp
+g++ -c -m64 -O2 -fPIE ecn.cpp
+g++ -c -m64 -O2 -fPIE ec2.cpp
+g++ -c -m64 -O2 -fPIE flash.cpp
+g++ -c -m64 -O2 -fPIE crt.cpp
+ar rc libmiracl.a mrcore.o mrarth0.o mrarth1.o mrarth2.o mralloc.o mrsmall.o mrzzn2.o mrzzn3.o
+ar r libmiracl.a mrio1.o mrio2.o mrjack.o mrgcd.o mrxgcd.o mrarth3.o mrbits.o mrecn2.o
+ar r libmiracl.a mrrand.o mrprime.o mrcrt.o mrscrt.o mrmonty.o mrcurve.o mrsroot.o mrzzn2b.o
+ar r libmiracl.a mrpower.o mrfast.o mrshs.o mrshs256.o mraes.o mrlucas.o mrstrong.o mrgcm.o    
+ar r libmiracl.a mrflash.o mrfrnd.o mrdouble.o mrround.o mrbuild.o
+ar r libmiracl.a mrflsh1.o mrpi.o mrflsh2.o mrflsh3.o mrflsh4.o 
+ar r libmiracl.a mrbrick.o mrebrick.o mrec2m.o mrgf2m.o mrmuldv.o mrshs512.o  mrsha3.o mrfpe.o
+ar r libmiracl.a big.o zzn.o ecn.o ec2.o flash.o crt.o
+rm mr*.o
